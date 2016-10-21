@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {other} from '.\other';
+import { OtherComponent } from '.\other';
 
 @Component({
   selector: 'app-root',
