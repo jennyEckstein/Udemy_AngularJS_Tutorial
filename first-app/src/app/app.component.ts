@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { OtherComponent, AnotherComponent } from './other';
+import { DatabindingComponent } from '.\databinding\databinding.component.ts';
+
+
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  directives: ['OtherComponent', 'AnotherComponent']
+  template: `
+  		<h1> Root Component </h1>
+  		<jenny-databinding></jenny-databinding>
+  `
 })
 export class AppComponent {
-  title = 'Hellow World!';
 }
