@@ -1,4 +1,21 @@
+<h1> String Interpolation </h1>
+
 <p>
   {{ stringInterpolation }} |
   {{ numberInterpolation }}
 </p>
+<hr>
+
+<h1> Property Binding </h1>
+Default HTML Value
+<input type="text" value="{{stringInterpolation}}"/>
+<br>
+No longer default - Angular 
+<input type="text" [value]="stringInterpolation"/>
+<br>
+<p>You can hardcode the value true of false here or you can pass it dynamically</p>
+<p [ngClass]="{orangeBorder: true}">Is reads class style</p>
+
+<p [ngClass]="{redBorder: onTest()}">Is this dynamically styled</p>
+
+<p [ngStyle]="{color: 'blue'}">Is Angular ngStyle styled</p>
