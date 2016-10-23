@@ -16,7 +16,7 @@ export class DatabindingComponent {
 		return true; 
 	}
 
-	onClicked(value: string){
-		alert(value);
+	onCli(val: string){
+		alert(val + " watherv");
 	}
 }

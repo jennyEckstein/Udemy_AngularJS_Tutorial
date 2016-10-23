@@ -12,6 +12,6 @@ export class EventBindingComponent {
   @Output() clicked = new EventEmitter<string>();
 
   onClicked(){
-    this.clicked.emit('It works');
+    this.clicked.emit('|It works|');
   }
 }
