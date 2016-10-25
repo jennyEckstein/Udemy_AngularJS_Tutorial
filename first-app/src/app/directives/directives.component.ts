@@ -8,9 +8,9 @@ import {} from '../highlight.directive';
 })
 export class DirectivesComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	private switch = true;
+	onSwitch(){
+		this.switch = !this.switch;
+	}
 
 }

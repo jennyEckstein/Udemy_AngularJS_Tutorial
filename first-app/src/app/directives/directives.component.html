@@ -16,6 +16,11 @@
 <div appHighlight [highlight]="'blue'" [defaultColor]="'
 red'">Some Text</div>
 		</td>
+		<td>
+		<h3>Structural Directives</h3>
+		<div [ngClass]="{border:true, background:true}" *ngIf="switch">Conditional Text</div>
+		<button (click)="onSwitch()">Switch</button>
+		</td>
 		
 	</tr>
 
