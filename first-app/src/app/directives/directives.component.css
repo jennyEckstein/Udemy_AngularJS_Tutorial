@@ -1,0 +1,21 @@
+.border{
+	border:3px solid blue;
+}
+
+.background{
+	background-color: green;
+}
+
+div{
+	width: 100px;
+	height:100px;
+}
+
+td{
+	background-color: white;
+	vertical-align: top;
+}
+
+table{
+	border:1px solid gray;
+}

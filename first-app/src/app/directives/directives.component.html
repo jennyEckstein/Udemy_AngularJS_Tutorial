@@ -1,0 +1,24 @@
+<table cellpadding="5" cellspacing="3" border="1">
+	<tr>
+		<td>
+			<h3>Attribute Directives</h3>
+<p>ngClass</p>
+<div [ngClass]="{border:true, background:true}"></div>
+<p>Native Property Binding</p>
+<div [class.background]="true"></div>
+<p>ngStyle</p>
+<div [ngStyle]="{'background-color': 'red'}"></div>
+		</td>
+
+		<td>
+			
+<h3> Custom Attribute Directive </h3>
+<div appHighlight [highlight]="'blue'" [defaultColor]="'
+red'">Some Text</div>
+		</td>
+		
+	</tr>
+
+</table>
+
+

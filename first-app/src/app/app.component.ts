@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { LifecycleComponent } from './lifecycle.component';
-
+import { DirectivesComponent } from './directives/directives.component';
 
 @Component({
   selector: 'app-root',
   template: `
-  		<h1> Root Component </h1>
+       <h1>Directives</h1>
+        <app-directives></app-directives>
+  		<!--
+      <h1> Root Component </h1>
   		<jenny-databinding></jenny-databinding>
   		<jenny-lifecycle *ngIf="!delete" [bindable]="boundValue">
   			<p>{{test}}</p>
@@ -14,6 +17,7 @@ import { LifecycleComponent } from './lifecycle.component';
   		<button (click)="delete = true"> Click to Delete </button>
   		<button (click)="test = 'Changed Value'"> Click to Change </button>
   		<button (click)="boundValue = '2000'"> Click to Change Binding </button>
+      -->
   `
 })
 export class AppComponent {
