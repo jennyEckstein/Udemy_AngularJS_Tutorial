@@ -20,6 +20,11 @@ red'">Some Text</div>
 		<h3>Structural Directives</h3>
 		<div [ngClass]="{border:true, background:true}" *ngIf="switch">Conditional Text</div>
 		<button (click)="onSwitch()">Switch</button>
+		<hr>
+		<h2>ngFor</h2>
+		<ul>
+			<li *ngFor="let item of items; let i = index">{{ item }} - (Index: {{ i }})</li>
+		</ul>
 		</td>
 		
 	</tr>

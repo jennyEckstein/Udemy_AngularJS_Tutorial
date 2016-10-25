@@ -8,6 +8,8 @@ import {} from '../highlight.directive';
 })
 export class DirectivesComponent implements OnInit {
 
+	private items = [1, 2, 3, 4, 5];
+
 	private switch = true;
 	onSwitch(){
 		this.switch = !this.switch;
