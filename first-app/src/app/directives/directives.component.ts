@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {} from '../highlight.directive';
+import { HighlightDirective } from '../highlight.directive';
+import { UnlessDirective } from '../unless.directive';
 
 @Component({
   selector: 'app-directives',
