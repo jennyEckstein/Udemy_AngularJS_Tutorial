@@ -6,11 +6,14 @@ import { DirectivesComponent } from './directives/directives.component';
 @Component({
   selector: 'app-root',
   template: `
-       <h1>Directives</h1>
+       <h3>Dependency Injection</h3>
        <app-comp-a></app-comp-a>
+       <hr>
        <app-comp-b></app-comp-b>
+       <hr>
         
   		<!--
+      <h1>Directives</h1>
       <app-directives></app-directives>
       <h1> Root Component </h1>
   		<jenny-databinding></jenny-databinding>
