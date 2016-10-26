@@ -7,8 +7,11 @@ import { DirectivesComponent } from './directives/directives.component';
   selector: 'app-root',
   template: `
        <h1>Directives</h1>
-        <app-directives></app-directives>
+       <app-comp-a></app-comp-a>
+       <app-comp-b></app-comp-b>
+        
   		<!--
+      <app-directives></app-directives>
       <h1> Root Component </h1>
   		<jenny-databinding></jenny-databinding>
   		<jenny-lifecycle *ngIf="!delete" [bindable]="boundValue">
