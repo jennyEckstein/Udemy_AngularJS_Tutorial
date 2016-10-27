@@ -1,14 +1,14 @@
 <div style="background-color: yellow;">
 <input type="text" #input>
 <button (click)="onLog(input.value)">Log</button>
-<button (click)="onStore()">Store</button>
+<button (click)="onStore(input.value)">Store</button>
 <button (click)="onSend()">Send</button>
 </div>
 <hr>
 <div>
 <button (click)="onGet()">Refresh Storage</button>
 <ul>
-	<li></li>
+	<li *ngFor="let item of items">{{item}}</li>
 </ul>
 <h3>Recieved Values</h3>
 <p>{{value}}
