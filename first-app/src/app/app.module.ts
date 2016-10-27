@@ -15,6 +15,7 @@ import { UnlessDirective } from './unless.directive';
 import { CompAComponent } from './comp-a/comp-a.component';
 import { CompBComponent } from './comp-b/comp-b.component';
 import { DataService } from './data.service';
+import { LogService } from './log.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,7 @@ import { DataService } from './data.service';
     FormsModule,
     HttpModule
   ],
-  providers: [DataService],
+  providers: [DataService, LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

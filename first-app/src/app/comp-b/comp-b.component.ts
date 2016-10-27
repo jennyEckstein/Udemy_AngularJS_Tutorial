@@ -3,8 +3,7 @@ import { LogService } from '../log.service';
 import { DataService } from '../data.service';
 @Component({
   selector: 'app-comp-b',
-  templateUrl: './comp-b.component.html',
-  providers: [LogService]
+  templateUrl: './comp-b.component.html'
 })
 export class CompBComponent{
 	value = '';
