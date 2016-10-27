@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { LogService } from '../log.service';
 import { DataService } from '../data.service';
-
 @Component({
   selector: 'app-comp-a',
   templateUrl: './comp-a.component.html',
-  providers: [LogService, DataService]
+  providers: [LogService]
 })
 export class CompAComponent{
 	value = '';

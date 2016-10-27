@@ -14,7 +14,7 @@ import { HighlightDirective } from './highlight.directive';
 import { UnlessDirective } from './unless.directive';
 import { CompAComponent } from './comp-a/comp-a.component';
 import { CompBComponent } from './comp-b/comp-b.component';
-
+import { DataService } from './data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,7 @@ import { CompBComponent } from './comp-b/comp-b.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
