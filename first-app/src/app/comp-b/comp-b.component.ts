@@ -1,11 +1,11 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { LogService } from '../log.service';
 import { DataService } from '../data.service';
 @Component({
   selector: 'app-comp-b',
   templateUrl: './comp-b.component.html'
 })
-export class CompBComponent{
+export class CompBComponent implements OnInit{
 	value = '';
 	items:string[] = [];
 	constructor(
@@ -22,5 +22,12 @@ export class CompBComponent{
 
 	onGet(values: string){
 		this.items = this.dataService.getData();
+	}
+
+	ngOnInit(){
+		this.dataService.pushedData.subscribe(
+				data => this.value = data
+			);
+		
 	}
 }
