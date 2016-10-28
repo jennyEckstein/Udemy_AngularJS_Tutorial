@@ -18,6 +18,7 @@ import { DataService } from './data.service';
 import { LogService } from './log.service';
 import { UserComponent } from './user/user.component';
 import { routing } from './app.routes';
+import { ClientComponent } from './client/client.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { routing } from './app.routes';
     UnlessDirective,
     CompAComponent,
     CompBComponent,
-    UserComponent
+    UserComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,
