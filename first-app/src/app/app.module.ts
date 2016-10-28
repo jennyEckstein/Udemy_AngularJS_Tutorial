@@ -17,6 +17,8 @@ import { CompBComponent } from './comp-b/comp-b.component';
 import { DataService } from './data.service';
 import { LogService } from './log.service';
 import { UserComponent } from './user/user.component';
+import { routing } from './app.routes';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,8 @@ import { UserComponent } from './user/user.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [DataService, LogService],
   bootstrap: [AppComponent]
