@@ -16,6 +16,7 @@ import { CompAComponent } from './comp-a/comp-a.component';
 import { CompBComponent } from './comp-b/comp-b.component';
 import { DataService } from './data.service';
 import { LogService } from './log.service';
+import { UserComponent } from './user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { LogService } from './log.service';
     HighlightDirective,
     UnlessDirective,
     CompAComponent,
-    CompBComponent
+    CompBComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
