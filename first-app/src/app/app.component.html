@@ -3,4 +3,6 @@
 	<a [routerLink]="['client']">Client</a>
 	<a [routerLink]="['user']">User</a>
 <hr>
+<input type="text" #id (input)="0">
+<a [routerLink]="['user', id.value]">User</a>
 <router-outlet></router-outlet>
