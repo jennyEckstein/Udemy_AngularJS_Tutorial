@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html'
 })
-export class UserComponent implements OnInit {
+export class UserComponent{
 
-  constructor() { }
+	constructor(private router: Router){
 
-  ngOnInit() {
-  }
-
-}
+	}
+	onNavigate(){
+		this.router.navigate(['/']);
+	}
+ }

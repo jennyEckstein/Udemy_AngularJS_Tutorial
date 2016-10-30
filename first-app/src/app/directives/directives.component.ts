@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HighlightDirective } from '../highlight.directive';
 import { UnlessDirective } from '../unless.directive';
 
@@ -7,7 +7,7 @@ import { UnlessDirective } from '../unless.directive';
   templateUrl: './directives.component.html',
   styleUrls: ['./directives.component.css']
 })
-export class DirectivesComponent implements OnInit {
+export class DirectivesComponent {
 
 	private items = [1, 2, 3, 4, 5];
 	private value = 100;
