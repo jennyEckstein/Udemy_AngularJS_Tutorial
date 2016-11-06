@@ -18,6 +18,10 @@ export class DataDrivenComponent implements OnInit{
 			password: 'password'
 		});
 	}
+
+	onSubmit(){
+		console.log(this.registerForm);
+	}
 	
 	/*registerForm = new FormGroup({
 		username: new FormControl(),
