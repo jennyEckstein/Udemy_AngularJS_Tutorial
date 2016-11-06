@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder} from '@angular/forms';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-data-driven',
@@ -7,15 +7,15 @@ import {FormGroup, FormBuilder} from '@angular/forms';
 })
 export class DataDrivenComponent implements OnInit{
 
-	registerForm: FormGroup;
+	registerForm: FormGroup;	
 
 	constructor(private formBuilder: FormBuilder){}
 
 	ngOnInit(){
 		this.registerForm = this.formBuilder.group({
-			username: 'username',
-			email: 'email',
-			password: 'password'
+			username: ['', [Validators.required, Validators.maxLength(10)]],
+			email: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}')]],
+			password: ['', Validators.required]
 		});
 	}
 
