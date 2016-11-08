@@ -14,6 +14,7 @@
                    class="form-control"
                    id="email"
                    formControlName="email">
+                   <div *ngIf="!registerForm.contains('email').valid">Invalid Email</div>
         </div>
     </div>
 
@@ -36,5 +37,5 @@
         </div>
     </div>
     <button type="button" class="btn btn-default">Add Hobby</button>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Submit</button>
 </form>
