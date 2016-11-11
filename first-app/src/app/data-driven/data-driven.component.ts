@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-data-driven',
@@ -15,7 +15,10 @@ export class DataDrivenComponent{
 			username: ['', [Validators.required, Validators.maxLength(10)]],
 			email: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}')]],
 			password: ['', Validators.required],
-			gender: ""
+			gender: "",
+			hobbies: new FormArray([
+					new FormControl('Cooking', Validators.required)
+				])
 		});
 	}
 
@@ -24,6 +27,9 @@ export class DataDrivenComponent{
 		console.log(this.registerForm);
 	}
 	
+	onAddHobby(){
+		(<FormArray>this.registerForm.get('hobbies')).push(new FormControl('', Validators.required));
+	}
 	/*registerForm = new FormGroup({
 		username: new FormControl(),
 		email: new FormControl(),
