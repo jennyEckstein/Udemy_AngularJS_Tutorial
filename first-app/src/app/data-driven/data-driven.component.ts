@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
+import { Observable } from "rxjs/Rx";
 
 @Component({
   selector: 'app-data-driven',
@@ -17,7 +18,7 @@ export class DataDrivenComponent{
 			password: ['', Validators.required],
 			gender: "",
 			hobbies: formBuilder.array([
-					['Cooking', Validators.required]
+					['Cooking', Validators.required, this.asyncExampleValidator]
 				])
 		});
 	}
@@ -28,7 +29,7 @@ export class DataDrivenComponent{
 	}
 	
 	onAddHobby(){
-		(<FormArray>this.registerForm.get('hobbies')).push(new FormControl('', Validators.required));
+		(<FormArray>this.registerForm.get('hobbies')).push(new FormControl('', Validators.required, this.asyncExampleValidator));
 	}
 
 	exampleValidator(control: FormControl): {[s: string]: boolean}{
@@ -36,6 +37,21 @@ export class DataDrivenComponent{
 			return {example: true};
 		}
 		return null;
+	}
+
+	asyncExampleValidator(control: FormControl): Promise<any> | Observable<any>{
+		const promise = new Promise<any>(
+				(resolve, reject) => {
+					setTimeout(() => {
+						if(control.value === 'Example'){
+							resolve({'invalid': true})
+						}else{
+							resolve(null);
+						}
+					}, 1500);
+				}
+			);
+		return promise;
 	}
 
 	/*registerForm = new FormGroup({
