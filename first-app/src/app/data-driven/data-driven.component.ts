@@ -16,8 +16,8 @@ export class DataDrivenComponent{
 			email: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}')]],
 			password: ['', Validators.required],
 			gender: "",
-			hobbies: new FormArray([
-					new FormControl('Cooking', Validators.required)
+			hobbies: formBuilder.array([
+					['Cooking', Validators.required]
 				])
 		});
 	}
