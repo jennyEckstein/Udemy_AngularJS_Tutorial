@@ -2,7 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'forms.component.html'
+  templateUrl: 'app.component.html',
+  styles: [`
+	  .pipes{
+	  	margin:32px;
+	  	padding: 32px;
+	  }
+  `]
 })
 export class AppComponent{
   
