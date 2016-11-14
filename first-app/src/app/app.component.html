@@ -16,4 +16,8 @@
 	<ul *ngFor="let item of values | filterpipe: 'ea' ">
 		<li>{{item}}</li>
 	</ul>
+
+	<hr>
+	<h2>Async Pipe</h2>
+	<p>{{asyncValue | async}}</p>
 </div>
