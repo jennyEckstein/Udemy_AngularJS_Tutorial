@@ -9,4 +9,11 @@
 	<h2>Custom Pipe</h2>
 	<input type="text" #input (keyup)="0">
 	<p>{{input.value | doublepipe}}</p>
+
+	<input type="text" #newItem>
+	<button (click)="values.push(newItem.value)">Add Item</button>
+
+	<ul *ngFor="let item of values | filterpipe: 'ea' ">
+		<li>{{item}}</li>
+	</ul>
 </div>
