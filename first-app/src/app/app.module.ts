@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { DoublepipePipe } from './shared/doublepipe.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DoublepipePipe
   ],
   imports: [
     BrowserModule,
